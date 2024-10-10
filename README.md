@@ -1,4 +1,41 @@
 # NETWORK PROGRAMMING: Project report 1
+
+## Table of Contents
+1. [Server-Client Architecture](#server-client-architecture)
+2. [1 - Relay-Based Client-Server Time Request System](#1---relay-based-client-server-time-request-system)
+   - [Overview](#overview)
+   - [Reused Components](#reused-components)
+   - [File Descriptions](#file-descriptions)
+   - [How the System Works](#how-the-system-works)
+   - [Usage Instructions](#usage-instructions)
+   - [Example Output](#example-output)
+   - [Error Handling and Improvements](#error-handling-and-improvements)
+3. [2 - HTTP server with caching, logging, and censoring](#2---http-server-with-caching-logging-and-censoring)
+   - [Overview](#overview)
+   - [Components](#components)
+   - [How to Run](#how-to-run)
+   - [How to Test](#how-to-test)
+   - [Chain Testing](#chain-testing)
+   - [Files](#files)
+   - [Default and banned http server response displays](#default-and-banned-http-server-response-displays)
+4. [Conclusion](#conclusion)
+
+## Project Structure 
+```bash
+MINI-PROJET 1
+│
+├── exo1
+│   ├── ClientHorloge MP1.py
+│   ├── RelayHorloge MP1.py
+│   └── ServerHorloge MP1.py
+│
+└── exo2
+    ├── CacheRelay.py
+    ├── CensorRelay.py
+    ├── HTTPserver.py
+    └── SnifferRelay.py
+```
+
 ## Server-Client Architecture
 
 All the components in this project (the HTTP server and the relays) follow a consistent architecture:
@@ -14,7 +51,7 @@ In each Python script, the code that starts the server or relay is wrapped in th
 
 ![TOPO1](Topo1.png)
 
-### Project Overview
+### Overview
 
 This project demonstrates a **client-server** architecture with a **relay** in between. The **client** sends a request to the **server** through a **relay**, which forwards the request and the server’s response. The system is designed to calculate the time difference between when a message is sent by the client and when the response is received.
 
@@ -196,6 +233,9 @@ Set the proxy address of each relay to point to the next in the chain (example: 
 - `CensorRelay.py`: HTTP Censor Relay.
 - `http_sniffer_log.txt`: Log file for the Logger Relay.
 - `blocked_requests_log.txt`: Log file for the Censor Relay.
+
+### Default and banned http server response displays 
+
 
 ### Conclusion
 This project demonstrates an HTTP relay system capable of caching responses, logging requests, and censoring forbidden content. Each relay operates as a standalone component or can be chained to handle requests progressively.

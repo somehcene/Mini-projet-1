@@ -21,7 +21,7 @@ def handle_client(client_socket, client_address, server_ip, server_port):
         if is_forbidden(uri):
             print(f"Blocking forbidden URI: {uri}")
             log_blocked_request(client_address[0], uri)
-            forbidden_response = "HTTP/1.1 403 Forbidden\r\nAccess Denied".encode("utf-8")
+            forbidden_response = "HTTP/1.1 403 Forbidden\n\nAccess Denied".encode("utf-8")
             client_socket.sendall(forbidden_response)
         else:
             # Relay the request to the actual server
