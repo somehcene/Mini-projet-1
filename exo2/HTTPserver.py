@@ -2,6 +2,16 @@ from socket import *
 import threading
 
 def handle_client(client_connection, client_address):
+
+    '''
+    Handles incoming client connections by receiving HTTP requests and sending appropriate HTTP responses. For GET requests, it serves a basic HTML page or an error message.
+    
+    Parameters:
+        client_connection: The socket object representing the client connection.
+        client_address: The client's IP address and port.
+    
+    '''
+
     print(f"Connected by {client_address}")
 
     # Receive the HTTP request from the client
@@ -36,13 +46,15 @@ HTTP/1.1 500 Internal Server Error
     client_connection.close()
 
 def run_server():
+    '''
+    Starts the web server, listens for client connections, and creates a new thread for each client request to handle concurrently.
+    
+    '''
     portNumber = 12345
     serverSocket = socket(AF_INET, SOCK_STREAM)
     serverSocket.bind(('', portNumber))
     serverSocket.listen(1)
     print(f"Server listening on port {portNumber}...")
-   
-    #webPages_dir = Path(__file__).parent / 'WebPages'
 
     while True:
         client_connection, client_address = serverSocket.accept()

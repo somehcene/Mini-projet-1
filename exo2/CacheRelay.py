@@ -6,6 +6,15 @@ BUFFER_SIZE = 4096
 cache = {}
 
 def handle_client(client_socket, server_ip, server_port):
+    '''
+    Manages client requests by checking if the requested URI is cached. If not, it forwards the request to the server, caches the response, and sends it back to the client.
+
+    Parameters:
+        client_socket: The socket object for the client connection.
+        server_ip: IP address of the upstream server.
+        server_port: Port number of the upstream server.
+
+    '''
     request = client_socket.recv(BUFFER_SIZE).decode("utf-8")
     print(f"Received request:\n{request}")
 
@@ -30,6 +39,14 @@ def handle_client(client_socket, server_ip, server_port):
     client_socket.close()
 
 def run_cache_relay(relay_port=5555, server_ip='localhost', server_port=5556):
+    '''
+    Starts the cache relay server, listens on a port for incoming connections, and creates threads to handle each client request.
+
+    Parameters:
+        relay_port: Port on which the cache relay listens.
+        server_ip: IP address of the upstream server.
+        server_port: Port number of the upstream server.
+    '''
     relay_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     relay_socket.bind(('', relay_port))
     relay_socket.listen(5)
