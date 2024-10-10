@@ -6,7 +6,7 @@
 3. [1 - Relay-Based Client-Server Time Request System](#1---relay-based-client-server-time-request-system)
    - [Overview](#overview)
    - [Reused Components](#reused-components)
-   - [File Descriptions](#file-descriptions)
+   - [Components](#components)
    - [How the System Works](#how-the-system-works)
    - [Usage Instructions](#usage-instructions)
    - [Example Output](#example-output)
