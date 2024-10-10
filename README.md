@@ -71,7 +71,7 @@ Only minor changes were made to the TME1 client:
 - The server’s IP and port were updated to point to the **relay**.
 - The **relay** then communicates with the original server without modifying the TME1 code significantly.
 
-### File Descriptions
+### Components 
 
 1. **ClientHorloge MP1.py**:  
    - Sends a request count (integer) to the relay and requests the server's current time multiple times.
