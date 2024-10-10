@@ -6,6 +6,13 @@ import time
 BUFFER_SIZE = 4096
 
 def run_client(server_ip='localhost', server_port=5555, request_count=int(input("What's the request count? "))):
+    '''
+    Connects to the relay server, sends multiple requests asking for the current time, and calculates the round-trip time for each request.
+    Parameters:
+        server_ip: IP address of the relay server (default: 'localhost').
+        server_port: Port number of the relay server (default: 5555).
+        request_count: The number of requests to send to the server (prompted from the user).
+    '''
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client_socket.connect((server_ip, server_port))
 

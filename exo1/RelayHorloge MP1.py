@@ -4,6 +4,13 @@ import threading
 BUFFER_SIZE = 4096
 
 def handle_client(client_socket, server_ip, server_port):
+    '''
+    Relays client requests to the server and forwards the server's response back to the client.
+    Parameters:
+        client_socket: The socket object for the client connection.
+        server_ip: IP address of the server to forward the requests to.
+        server_port: Port number of the server.
+    '''
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.connect((server_ip, server_port))
 
@@ -27,6 +34,14 @@ def handle_client(client_socket, server_ip, server_port):
         server_socket.close()
 
 def run_relay(relay_port=5555, server_ip='localhost', server_port=1236):
+    '''
+    Starts the relay server, listens for incoming client connections, and spawns threads to relay requests between the client and the server.
+    Parameters:
+        relay_port: The port on which the relay listens for connections.
+        server_ip: The IP address of the upstream server.
+        server_port: The port number of the upstream server.
+        
+    '''
     relay_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     relay_socket.bind(('', relay_port))
     relay_socket.listen(5)

@@ -5,6 +5,12 @@ import datetime
 BUFFER_SIZE = 4096
 
 def handle_client(client_socket):
+    '''
+    Handles client connections by receiving the number of requests, processing each one, and sending back the current time for valid requests.
+    
+    Parameters:
+        client_socket: The socket object representing the client's connection.
+    '''
     try:
         # Receive the request count from the client
         count_data = client_socket.recv(4)  # Expect 4 bytes (the integer)
@@ -35,6 +41,10 @@ def handle_client(client_socket):
         print("Closed connection to client")
 
 def run_server(server_port=1236):
+    '''
+    Starts the server, listens for incoming client connections, and spawns a new thread for each client to handle concurrently.
+    
+    '''
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind(('', server_port))
     server_socket.listen(5)
