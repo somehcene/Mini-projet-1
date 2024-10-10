@@ -1,0 +1,104 @@
+Client IP: 127.0.0.1, URI: http://detectportal.firefox.com/canonical.html
+Response: HTTP/1.1 200 OK
+
+<html lang="fr">
+<head><meta charset="UTF-8"><title>TME1 PROGRAMMATION RESEAUX SU</title></head>
+<body><h1>The web server is working</h1></body>
+</html> 
+
+
+Client IP: 127.0.0.1, URI: http://detectportal.firefox.com/success.txt?ipv4
+Response: HTTP/1.1 200 OK
+
+<html lang="fr">
+<head><meta charset="UTF-8"><title>TME1 PROGRAMMATION RESEAUX SU</title></head>
+<body><h1>The web server is working</h1></body>
+</html> 
+
+
+Client IP: 127.0.0.1, URI: http://bannedforkorichi.com/
+Response: HTTP/1.1 403 Forbidden
+
+Access Denied
+
+Client IP: 127.0.0.1, URI: /
+Response: HTTP/1.1 200 OK
+
+<html lang="fr">
+<head><meta charset="UTF-8"><title>TME1 PROGRAMMATION RESEAUX SU</title></head>
+<body><h1>The web server is working</h1></body>
+</html> 
+
+
+Client IP: 127.0.0.1, URI: http://detectportal.firefox.com/canonical.html
+Response: HTTP/1.1 200 OK
+
+<html lang="fr">
+<head><meta charset="UTF-8"><title>TME1 PROGRAMMATION RESEAUX SU</title></head>
+<body><h1>The web server is working</h1></body>
+</html> 
+
+
+Client IP: 127.0.0.1, URI: http://detectportal.firefox.com/success.txt?ipv4
+Response: HTTP/1.1 200 OK
+
+<html lang="fr">
+<head><meta charset="UTF-8"><title>TME1 PROGRAMMATION RESEAUX SU</title></head>
+<body><h1>The web server is working</h1></body>
+</html> 
+
+
+Client IP: 127.0.0.1, URI: http://forbidden.com/
+Response: HTTP/1.1 200 OK
+
+<html lang="fr">
+<head><meta charset="UTF-8"><title>TME1 PROGRAMMATION RESEAUX SU</title></head>
+<body><h1>The web server is working</h1></body>
+</html> 
+
+
+Client IP: 127.0.0.1, URI: http://forbidden.com/favicon.ico
+Response: HTTP/1.1 200 OK
+
+<html lang="fr">
+<head><meta charset="UTF-8"><title>TME1 PROGRAMMATION RESEAUX SU</title></head>
+<body><h1>The web server is working</h1></body>
+</html> 
+
+
+Client IP: 127.0.0.1, URI: http://hcene.com/
+Response: HTTP/1.1 200 OK
+
+<html lang="fr">
+<head><meta charset="UTF-8"><title>TME1 PROGRAMMATION RESEAUX SU</title></head>
+<body><h1>The web server is working</h1></body>
+</html> 
+
+
+Client IP: 127.0.0.1, URI: http://hcene.com/favicon.ico
+Response: HTTP/1.1 200 OK
+
+<html lang="fr">
+<head><meta charset="UTF-8"><title>TME1 PROGRAMMATION RESEAUX SU</title></head>
+<body><h1>The web server is working</h1></body>
+</html> 
+
+
+Client IP: 127.0.0.1, URI: http://google.com/
+Response: HTTP/1.1 200 OK
+
+<html lang="fr">
+<head><meta charset="UTF-8"><title>TME1 PROGRAMMATION RESEAUX SU</title></head>
+<body><h1>The web server is working</h1></body>
+</html> 
+
+
+Client IP: 127.0.0.1, URI: http://google.com/favicon.ico
+Response: HTTP/1.1 200 OK
+
+<html lang="fr">
+<head><meta charset="UTF-8"><title>TME1 PROGRAMMATION RESEAUX SU</title></head>
+<body><h1>The web server is working</h1></body>
+</html> 
+
+

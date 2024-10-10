@@ -1,5 +1,4 @@
 from socket import *
-from pathlib import Path
 import threading
 
 def handle_client(client_connection, client_address):

@@ -1,6 +1,6 @@
 import socket
 import threading
-import os
+#import os
 
 BUFFER_SIZE = 4096
 cache = {}
