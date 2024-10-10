@@ -1,8 +1,9 @@
 # NETWORK PROGRAMMING: Project report 1
 
 ## Table of Contents
-1. [Server-Client Architecture](#server-client-architecture)
-2. [1 - Relay-Based Client-Server Time Request System](#1---relay-based-client-server-time-request-system)
+1. [Project Structure](#project-structure)
+2. [Server-Client Architecture](#server-client-architecture)
+3. [1 - Relay-Based Client-Server Time Request System](#1---relay-based-client-server-time-request-system)
    - [Overview](#overview)
    - [Reused Components](#reused-components)
    - [File Descriptions](#file-descriptions)
@@ -10,7 +11,7 @@
    - [Usage Instructions](#usage-instructions)
    - [Example Output](#example-output)
    - [Error Handling and Improvements](#error-handling-and-improvements)
-3. [2 - HTTP server with caching, logging, and censoring](#2---http-server-with-caching-logging-and-censoring)
+4. [2 - HTTP server with caching, logging, and censoring](#2---http-server-with-caching-logging-and-censoring)
    - [Overview](#overview)
    - [Components](#components)
    - [How to Run](#how-to-run)
@@ -18,7 +19,7 @@
    - [Chain Testing](#chain-testing)
    - [Files](#files)
    - [Default and banned http server response displays](#default-and-banned-http-server-response-displays)
-4. [Conclusion](#conclusion)
+5. [Conclusion](#conclusion)
 
 ## Project Structure 
 ```bash
@@ -226,15 +227,13 @@ To chain the relays:
 - Cache → Logger → Censor → Server
 Set the proxy address of each relay to point to the next in the chain (example: Cache relay points to the Logger(sniffer), Logger to the Censor, and Censor to the Server).
 
-### Files
-- `HTTPserver.py`: Basic HTTP server.
-- `CacheRelay.py`: HTTP Cache Relay.
-- `SnifferRelay.py`: HTTP Logger Relay.
-- `CensorRelay.py`: HTTP Censor Relay.
-- `http_sniffer_log.txt`: Log file for the Logger Relay.
-- `blocked_requests_log.txt`: Log file for the Censor Relay.
+### *Displays*: efault and banned http server response 
 
-### Default and banned http server response displays 
+![Default server webpage/response](default.png)
+*Figure 1: default http server response/web-page*
+
+![Denied access to banned/forbidden pages](banned.png)
+*Figure 2: Censor response to a banned page access request*
 
 
 ### Conclusion
